@@ -1,8 +1,8 @@
-"""create table birds
+"""initial migration with birds table
 
-Revision ID: 6034d52c059f
+Revision ID: a5df1a4047bf
 Revises: 
-Create Date: 2022-10-13 16:02:56.583047
+Create Date: 2025-07-04 18:01:59.084868
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '6034d52c059f'
+revision = 'a5df1a4047bf'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -22,6 +22,7 @@ def upgrade():
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('name', sa.String(), nullable=True),
     sa.Column('species', sa.String(), nullable=True),
+    sa.Column('image', sa.String(), nullable=True),
     sa.PrimaryKeyConstraint('id')
     )
     # ### end Alembic commands ###

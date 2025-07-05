@@ -81,3 +81,6 @@ class BirdByID(Resource):
         return make_response('', 204)
 
 api.add_resource(BirdByID, '/birds/<int:id>')
+
+if __name__ == '__main__':
+    print(os.environ.get('DATABASE_URI'))
